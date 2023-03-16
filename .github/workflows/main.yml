@@ -2,9 +2,8 @@ name: github-action-email
 on: [push]
 jobs:
   log-github-event-goodies:
-    name: "LOG Everything on GitHub Event"
+    name: "log message"
     runs-on: ubuntu-latest
     steps:
       - name: Logging
-        run: |
-          echo "${{ github.event.head_commit.message }}"
+        run: echo "${{ github.event.head_commit.message }}"
