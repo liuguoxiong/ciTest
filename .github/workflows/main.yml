@@ -1,0 +1,5 @@
+#当master分支push时触发，可以限定分支或标签。
+on:
+  push:
+    branches:
+      - main
