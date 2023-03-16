@@ -4,9 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # 检出代码
-    - name: CheckoutRepo
-      uses: actions/checkout@v2
     # 获取master分支上最新一条提交的git log  
     - name: GetLastLog
       id: git_log
