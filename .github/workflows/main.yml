@@ -1,15 +1,10 @@
 name: github-action-email
 on: [push]
 jobs:
-  build:
+  log-github-event-goodies:
+    name: "LOG Everything on GitHub Event"
     runs-on: ubuntu-latest
     steps:
-    # 检出代码
-    - name: CheckoutRepo
-      uses: actions/checkout@v2
-    # 获取master分支上最新一条提交的git log  
-    - name: GetLastLog
-      id: git_log
-      uses: Edisonboy/latest-git-log-action@main
-      with:
-        tag: origin/main
+      - name: Logging
+        run: |
+          echo "${{ github.event.head_commit.message }}"
